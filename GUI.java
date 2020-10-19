@@ -331,8 +331,9 @@ public class GUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_delayActionPerformed
 
-    public void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
+    public static void main(String [] args) {
+        GUI g = new GUI();
+    	java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new GUI().setVisible(true);
             }
@@ -340,7 +341,7 @@ public class GUI extends javax.swing.JFrame {
         while(GUI_active = true){
             Hotkeys.key_listener.keyTyped(kevt);
             if(start_hotkey = true){
-                btd_startActionPerformed(aevt);
+                g.btd_startActionPerformed(aevt);
             }
             if(close_hotkey = true){
                 System.exit(0);
